@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit User Form</title>
+</head>
+<body>
+    <h2>Edit User</h2>
+<form method="POST" action="edit_user.php">
+    <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
+
+    <p>
+        <label>Full Name:</label><br>
+        <input type="text" name="fullname" value="<?php echo htmlspecialchars($user['fullname']); ?>" required>
+    </p>
+
+    <p>
+        <label>Email:</label><br>
+        <input type="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
+    </p>
+
+    <p>
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" <?php if ($user['gender'] == "Male") echo "checked"; ?>> Male
+        <input type="radio" name="gender" value="Female" <?php if ($user['gender'] == "Female") echo "checked"; ?>> Female
+    </p>
+
+    <p>
+        <label>Hobbies:</label><br>
+        <input type="text" name="hobbies" value="<?php echo htmlspecialchars($user['hobbies']); ?>">
+        <br><small>(Comma-separated)</small>
+    </p>
+
+    <p>
+        <label>Country:</label><br>
+        <input type="text" name="country" value="<?php echo htmlspecialchars($user['country']); ?>" required>
+    </p>
+
+    <p>
+        <input type="submit" value="Update">
+    </p>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+
+    <form action="register.php" method="POST">
+        <p>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" name="fullname" id="fullname" required>
+        </p>
+
+        <p>
+            <label for="email">Email Address:</label><br>
+            <input type="email" name="email" id="email" required>
+        </p>
+
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" id="password" required>
+        </p>
+
+        <p>
+            <label for="confirm_password">Confirm Password:</label><br>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+        </p>
+
+        <p>
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="Male" id="male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" name="gender" value="Female" id="female" required>
+            <label for="female">Female</label>
+        </p>
+
+        <p>
+            <label>Hobbies:</label><br>
+            <input type="checkbox" name="hobbies[]" value="Reading" id="reading">
+            <label for="reading">Reading</label><br>
+            <input type="checkbox" name="hobbies[]" value="Traveling" id="traveling">
+            <label for="traveling">Traveling</label><br>
+            <input type="checkbox" name="hobbies[]" value="Sports" id="sports">
+            <label for="sports">Sports</label>
+        </p>
+
+        <p>
+            <label for="country">Country:</label><br>
+            <select name="country" id="country" required>
+                <option value="">Select Country</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+                <option value="India">India</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+            </select>
+        </p>
+
+        <p>
+            <input type="submit" value="Register">
+        </p>
+    </form>
+    <p>
+        <a href="login.html">Already have an account? Login</a>
+    </p>
+</body>
+</html>
